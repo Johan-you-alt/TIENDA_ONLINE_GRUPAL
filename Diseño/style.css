@@ -3,74 +3,48 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    background-color: #f9f9e6; /* fondo claro */
 }
 
-    /* h1 (lo dejé por si lo usas en otra sección) */
-h1 {
-    font-size: 35px;
-    background-color: chartreuse;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: italic;
-}
-
-    /* h2: estilo que ya tenías, aplicado a título de la sección */
+/* h2 que ya tenías, manteniendo estilo */
 h2 {
     font-size: 35px;
     background-color: skyblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
+    margin: 20px;
 }
 
-    /* Tabla: corregí y tomé tu table { ... } original como base */
+/* tabla: usando lo que me diste más ajustes básicos */
 table {
-    font-size: 20px; /* reducido para que quepa bien */
+    font-size: 20px;
+    background-color: #fff;  /* corregido: no rgb(red,green,blue) */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     color: brown;
 
-    /* propiedades que estaban como estilos en línea en tu HTML original */
-    background: #ffffff;              /* antes era rgb(red, green, blue) inválido */
-    border-collapse: collapse;        /* para que no se dupliquen bordes */
-    width: 100%;
-    max-width: 900px;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px auto; /* centrada */
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+/* bordes de celdas */
+table th, table td {
     border: 1px solid #999;
+    padding: 12px;
 }
 
-/* Encabezado de tabla */
-table thead tr {
-    background: #eee;
+/* encabezado con fondo gris */
+table th {
+    background-color: #eee;
 }
 
-/* Celdas: mismo padding que tenías con cellpadding="8" */
-table th,
-table td {
-    padding: 8px;
-    border: 1px solid #ddd;
-}
-
-/* Imagenes en tabla: que no desborden */
-table img {
-    max-width: 120px;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Caption: pequeño estilo para que sea legible */
-table caption {
+/* caption arriba */
+caption {
     caption-side: top;
     font-weight: bold;
-    margin-bottom: 8px;
-}
-
-/* Wrapper (para control de scroll si fuera necesario) */
-.table-wrapper {
-    overflow-x: auto;
-    padding: 10px;
+    margin: 10px;
 }
 
 
