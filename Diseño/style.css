@@ -1,4 +1,11 @@
 /* Estilos para el catalogo del producto */
+    /* Base y tipografías (tomadas de tus estilos ya enviados) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+    /* h1 (lo dejé por si lo usas en otra sección) */
 h1 {
     font-size: 35px;
     background-color: chartreuse;
@@ -6,6 +13,7 @@ h1 {
     font-style: italic;
 }
 
+    /* h2: estilo que ya tenías, aplicado a título de la sección */
 h2 {
     font-size: 35px;
     background-color: skyblue;
@@ -13,25 +21,58 @@ h2 {
     font-style: italic;
 }
 
+    /* Tabla: corregí y tomé tu table { ... } original como base */
 table {
-    font-size: 20px;
+    font-size: 20px; /* reducido para que quepa bien */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     color: brown;
 
-    /* ajustes que estaban en inline */
-    background: #fff;
-    border-collapse: collapse;
+    /* propiedades que estaban como estilos en línea en tu HTML original */
+    background: #ffffff;              /* antes era rgb(red, green, blue) inválido */
+    border-collapse: collapse;        /* para que no se dupliquen bordes */
     width: 100%;
     max-width: 900px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    border: 1px solid #999;
 }
 
-table th {
+/* Encabezado de tabla */
+table thead tr {
     background: #eee;
 }
+
+/* Celdas: mismo padding que tenías con cellpadding="8" */
+table th,
+table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Imagenes en tabla: que no desborden */
+table img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Caption: pequeño estilo para que sea legible */
+table caption {
+    caption-side: top;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Wrapper (para control de scroll si fuera necesario) */
+.table-wrapper {
+    overflow-x: auto;
+    padding: 10px;
+}
+
 
 
 
