@@ -9,10 +9,19 @@ body {
 /* h2 que ya tenías, manteniendo estilo */
 .menu h2 {
     font-size: 35px;
-    background-color: skyblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
-    
+    text-align: center;     /* centrado */
+    color: #222;            /* buen color de letra (gris oscuro elegante) */
+    background: none;       /* sin fondo */
+    margin-bottom: 10px;
+}
+
+.menu p {
+    text-align: center;     /* centrado */
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #444;            /* gris más suave */
 }
 
 /* tabla: usando lo que me diste más ajustes básicos */
