@@ -1,0 +1,103 @@
+/* Header general */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #fff8f0; /* tono suave tipo café */
+  border-bottom: 2px solid #e6d3c7;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.site-header .logo img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.site-header .logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Menú de navegación */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #5c3d2e; /* marrón café */
+  font-weight: 600;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 5px;
+}
+
+.navbar ul li a:hover {
+  color: #c97b63;
+  border-bottom: 2px solid #c97b63;
+}
+
+/* Acciones (carrito + login) */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-btn img {
+  width: 28px;
+  height: 28px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #d9534f;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+.login-btn {
+  text-decoration: none;
+  padding: 8px 15px;
+  background-color: #5c3d2e;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #c97b63;
+}
+
+/* Responsivo (pantallas pequeñas) */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    background: #fff8f0;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    padding: 20px;
+    display: none;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+}
