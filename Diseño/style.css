@@ -7,12 +7,12 @@ body {
 }
 
 /* h2 que ya tenías, manteniendo estilo */
-h2 {
+.menu h2 {
     font-size: 35px;
     background-color: skyblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: italic;
-    margin: 20px;
+    
 }
 
 /* tabla: usando lo que me diste más ajustes básicos */
