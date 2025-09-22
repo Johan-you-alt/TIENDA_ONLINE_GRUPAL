@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Producto - Croissant & Caffé</title>
+  <title>Registrarse - Croissant & Caffé</title>
   <!-- Estilos comunes -->
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/product.css">
+  <link rel="stylesheet" href="../css/forms.css">
 </head>
-
 <body>
 
   <!-- 🔹 HEADER (estructura común) -->
@@ -30,37 +29,35 @@
       </ul>
     </nav>
 
+    <!-- 🔹 Visitante: botones de login/registro -->
     <div class="user-actions">
       <a href="login.html" class="btn-login">Iniciar Sesión</a>
-      <a href="register.html" class="btn-register">Registrarse</a>
+      <a href="register.html" class="btn-register active">Registrarse</a>
     </div>
   </header>
 
+  <!-- 🔹 FORMULARIO DE REGISTRO -->
+  <main class="login-page">
+    <div class="form-container">
+      <h2>Crear Cuenta</h2>
+      <form>
+        <label for="name">Nombre completo</label>
+        <input type="text" id="name" placeholder="Tu nombre" required>
 
-  <!-- 🔹 PÁGINA DE PRODUCTO INDIVIDUAL -->
-  <main class="product-page">
-    <div class="product-container">
-      <div class="product-image">
-        <img src="../assets/images/producto-ejemplo.jpg" alt="Producto Croissant">
-      </div>
-      <div class="product-details">
-        <h1>Delicioso Croissant de Mantequilla</h1>
-        <p class="price">S/ 12.00</p>
-        <p class="description">
-          Croissant recién horneado, crujiente por fuera y suave por dentro.
-          Perfecto para acompañar tu café favorito.
-        </p>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="ejemplo@gmail.com" required>
 
-        <form class="add-to-cart">
-          <label for="quantity">Cantidad:</label>
-          <input type="number" id="quantity" name="quantity" value="1" min="1">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="********" required>
 
-          <button type="submit" class="btn-add">Añadir al carrito</button>
-        </form>
-      </div>
+        <label for="confirm-password">Confirmar contraseña</label>
+        <input type="password" id="confirm-password" placeholder="********" required>
+
+        <button type="submit">Registrarme</button>
+      </form>
+      <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
     </div>
   </main>
-
 
   <!-- 🔹 FOOTER (estructura común) -->
   <footer class="main-footer">

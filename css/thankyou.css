@@ -1,0 +1,57 @@
+/* Contenedor principal */
+.thankyou-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* espacio por header fijo */
+  background-color: #fff8f0;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* Caja del mensaje */
+.thankyou-container {
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Icono de check */
+.thankyou-icon {
+  font-size: 60px;
+  color: #b85c38;
+  margin-bottom: 20px;
+}
+
+/* Título */
+.thankyou-container h1 {
+  font-size: 1.8rem;
+  color: #5c3d2e;
+  margin-bottom: 15px;
+}
+/* Texto */
+.thankyou-container p {
+  font-size: 1rem;
+  color: #5c3d2e;
+  margin-bottom: 20px;
+}
+
+/* Botón */
+.btn-home {
+  display: inline-block;
+  padding: 12px 25px;
+  background-color: #b85c38;
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+  background-color: #5c3d2e;
+}

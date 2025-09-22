@@ -1,0 +1,97 @@
+/* ============================
+   Estilos específicos de account.html
+   ============================ */
+
+.account-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fffaf6; /* un tono suave para el fondo */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos principales */
+.account-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #5a3825; /* marrón café */
+  font-size: 2rem;
+}
+
+.account-container h2 {
+  margin-bottom: 1rem;
+  color: #7b4b2a;
+  border-bottom: 2px solid #f2d0a9;
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+/* Secciones de la cuenta */
+.account-info,
+.account-orders,
+.account-actions {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #f2d0a9;
+  border-radius: 10px;
+}
+
+/* Texto dentro de perfil */
+.account-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Lista de pedidos */
+.account-orders ul {
+  list-style: none;
+  padding: 0;
+}
+
+.account-orders li {
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  background: #fff7f0;
+  border-radius: 8px;
+  border: 1px solid #f2d0a9;
+  font-size: 0.95rem;
+}
+
+/* Estados de pedido */
+.status {
+  font-weight: bold;
+  color: #5a3825;
+}
+
+/* Botones reutilizables */
+.btn {
+  display: inline-block;
+  margin: 0.5rem 0;
+  padding: 0.7rem 1.2rem;
+  background: #7b4b2a;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #5a3825;
+}
+
+/* Botón de logout */
+.btn-logout {
+  background: #c0392b;
+}
+
+.btn-logout:hover {
+  background: #922b21;
+}
+
+/* Centrar acciones rápidas */
+.account-actions {
+  text-align: center;
+}

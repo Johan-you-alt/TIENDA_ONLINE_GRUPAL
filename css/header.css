@@ -1,103 +1,138 @@
-/* Header general */
-.site-header {
+/* Estilos del HEADER*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: #fff8f0; /* tono café claro */
   padding: 15px 40px;
-  background-color: #fff8f0; /* tono suave tipo café */
-  border-bottom: 2px solid #e6d3c7;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  border-bottom: 2px solid #e0c097; /* línea elegante */
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  
+  position: fixed;       /* Fija el header */
+  top: 0;                /* Siempre pegado arriba */
+  left: 0;               /* Que inicie desde el borde izquierdo */
+  width: 100%;           /* Que abarque todo el ancho */
+  z-index: 1000;         /* Para que esté por encima de otros elementos */
+  background-color: #fff; /* Fondo sólido para que no sea transparente */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* un poco de sombra */
+  
+  transition: all 0.3s ease;
 }
 
-/* Logo */
-.site-header .logo img {
-  height: 60px;
-  width: auto;
-  transition: transform 0.2s ease;
+main {
+  padding-top: 20px; /* igual a la altura total del header */
 }
 
-.site-header .logo img:hover {
-  transform: scale(1.05);
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5c3d2e; /* marrón cafetería */
 }
 
-/* Menú de navegación */
-.navbar ul {
+.logo img {
+  height: 80px;
+  margin-right: 10px;
+}
+
+.nav-menu ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 80px;
 }
 
-.navbar ul li a {
+.nav-menu a {
   text-decoration: none;
-  color: #5c3d2e; /* marrón café */
-  font-weight: 600;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  padding-bottom: 5px;
+  color: #5c3d2e;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.navbar ul li a:hover {
-  color: #c97b63;
-  border-bottom: 2px solid #c97b63;
+.nav-menu a:hover {
+  color: #b85c38; /* tono cálido en hover */
 }
 
-/* Acciones (carrito + login) */
-.header-actions {
+/* 🔹 Estilos de los botones de usuario */
+.user-actions {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.cart-btn {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.cart-btn img {
-  width: 28px;
-  height: 28px;
-}
-
-.cart-count {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: #d9534f;
-  color: white;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 50%;
-}
-
-.login-btn {
-  text-decoration: none;
+.user-actions .btn-login,
+.user-actions .btn-register {
   padding: 8px 15px;
-  background-color: #5c3d2e;
-  color: white;
-  border-radius: 5px;
+  border: 1px solid #b85c38;
+  border-radius: 20px;
+  text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
 }
 
-.login-btn:hover {
-  background-color: #c97b63;
+/* Botón de Iniciar Sesión */
+.user-actions .btn-login {
+  color: #b85c38;
+  background-color: transparent;
 }
 
-/* Responsivo (pantallas pequeñas) */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-direction: column;
-    background: #fff8f0;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    padding: 20px;
-    display: none;
-  }
+.user-actions .btn-login:hover {
+  background-color: #b85c38;
+  color: #fff;
+}
 
-  .navbar ul.show {
-    display: flex;
-  }
+/* Botón de Registrarse */
+.user-actions .btn-register {
+  background-color: #b85c38;
+  color: #fff;
+}
+
+.user-actions .btn-register:hover {
+  background-color: #923f27;
+  border-color: #923f27;
+}
+
+/* Ícono de usuario */
+.user-actions .icon-user {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #5c3d2e;
+  transition: color 0.3s ease;
+}
+
+.user-actions .icon-user:hover {
+  color: #b85c38;
+}
+
+/* --- Estilo para el ícono de usuario --- */
+.icon-user {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+
+  border-radius: 50%;              /* Forma circular */
+  background-color: #f8e8d8;       /* Fondo suave café */
+  color: #5c3d2e;                  /* Color ícono */
+  font-size: 1.2rem;               /* Tamaño del ícono */
+  font-weight: bold;
+  cursor: default;                 /* No parece un enlace */
+  user-select: none;               /* No se puede seleccionar */
+  transition: all 0.3s ease;
+}
+
+.icon-user:hover {
+  background-color: #b85c38;       /* Hover más fuerte */
+  color: #fff;                     /* Ícono blanco */
 }

@@ -3,81 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nombre de la página</title>
+  <title>Iniciar Sesión - Croissant & Caffé</title>
   <!-- Estilos comunes -->
   <link rel="stylesheet" href="../css/global.css">
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../assets/css/login.css">
+  <link rel="stylesheet" href="../css/forms.css">
 </head>
 
 <body>
 
-  <!--🔹1. HEADER (Cabecera) -->
+  <!-- HEADER (estructura común) -->
   <header class="main-header">
-    <!-- 🚀 Responsable: Compañero -->
     <div class="logo">
-      <a href="../index.html">Croissant & Café</a>
+      <a href="../index.html">
+        <img src="../components/logo.png" alt="Croissant & Caffé Logo">
+        <span>Croissant & Caffé</span>
+      </a>
     </div>
+
     <nav class="nav-menu">
       <ul>
         <li><a href="../index.html">Inicio</a></li>
         <li><a href="catalog.html">Catálogo</a></li>
-        <li><a href="product.html">Producto</a></li>
         <li><a href="cart.html">Carrito</a></li>
-        <li><a href="checkout.html">Pago</a></li>
-        <li><a href="thankyou.html">Gracias</a></li>
       </ul>
     </nav>
+
+    <div class="user-actions">
+      <a href="login.html" class="btn-login">Iniciar Sesión</a>
+      <a href="register.html" class="btn-register">Registrarse</a>
+    </div>
   </header>
 
 
-  <!--🔹 2. PÁGINA DE INICIO -->
-  <main class="home-page">
-    <!-- Banner principal, productos destacados -->
-    <!-- 🚀 Responsable: Compañero de Inicio -->
+  <!-- PÁGINA DE LOGIN -->
+  <main class="login-page">
+    <div class="form-container">
+      <h2>Iniciar Sesión</h2>
+      <form>
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" placeholder="ejemplo@gmail.com" required>
+
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="********" required>
+
+        <button type="submit">Ingresar</button>
+      </form>
+      <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+    </div>
   </main>
 
 
-  <!--🔹 3. CATÁLOGO DE PRODUCTOS -->
-  <section class="catalog-page">
-    <!-- Lista de productos con imagen, precio, variantes -->
-    <!-- 🚀 Responsable: Compañero de Catálogo -->
-  </section>
-
-
-  <!--🔹 4. PÁGINA DE PRODUCTO INDIVIDUAL -->
-  <section class="product-page">
-    <!-- Detalles del producto seleccionado -->
-    <!-- 🚀 Responsable: Compañero de Producto -->
-  </section>
-
-
-  <!--🔹 5. CARRITO DE COMPRAS -->
-  <section class="cart-page">
-    <!-- Lista de productos seleccionados, total -->
-    <!-- 🚀 Responsable: Compañero de Carrito -->
-  </section>
-
-
-  <!--🔹 6. CHECKOUT (Pago) -->
-  <section class="checkout-page">
-    <!-- Formulario de datos de envío y pago -->
-    <!-- 🚀 Responsable: Compañero de Checkout -->
-  </section>
-
-
-  <!--🔹 7. PÁGINA DE AGRADECIMIENTO -->
-  <section class="thankyou-page">
-    <!-- Mensaje de confirmación -->
-    <!-- 🚀 Responsable: Compañero -->
-  </section>
-
-
-  <!--🔹 8. FOOTER (Pie de página) -->
+  <!-- FOOTER (estructura común) -->
   <footer class="main-footer">
-    <!-- 🚀 Responsable: Compañero -->
-    <p>&copy; 2025 Croissant & Café - Todos los derechos reservados.</p>
+    <p>&copy; 2025 Croissant & Caffé - Todos los derechos reservados.</p>
+
     <nav class="footer-nav">
       <ul>
         <li><a href="#">Políticas de venta</a></li>
@@ -86,6 +67,12 @@
         <li><a href="contact.html">Contacto</a></li>
       </ul>
     </nav>
+
+    <div class="social-links">
+      <a href="#" aria-label="Facebook">🌐 Facebook</a>
+      <a href="#" aria-label="Instagram">📸 Instagram</a>
+      <a href="#" aria-label="Twitter">✖️ Twitter</a>
+    </div>
   </footer>
 
 </body>
