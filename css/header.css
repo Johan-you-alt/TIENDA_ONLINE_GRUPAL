@@ -49,15 +49,20 @@ main {
   gap: 80px;
 }
 
+/* añadir transición y ligero lift al hover de los enlaces del nav */
+/* IMPORTANT: display inline-block para que transform funcione */
 .nav-menu a {
+  display: inline-block;
   text-decoration: none;
   color: #5c3d2e;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.25s ease, transform 0.18s ease;
+  will-change: transform;
 }
 
 .nav-menu a:hover {
   color: #b85c38; /* tono cálido en hover */
+  transform: translateY(-3px);
 }
 
 /* 🔹 Estilos de los botones de usuario */
@@ -67,14 +72,17 @@ main {
   gap: 20px;
 }
 
+/* asegurar display para transform en ambos botones */
 .user-actions .btn-login,
 .user-actions .btn-register {
+  display: inline-block;
   padding: 8px 15px;
   border: 1px solid #b85c38;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+  will-change: transform;
   font-size: 0.95rem;
 }
 
@@ -87,6 +95,8 @@ main {
 .user-actions .btn-login:hover {
   background-color: #b85c38;
   color: #fff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 /* Botón de Registrarse */
@@ -98,6 +108,8 @@ main {
 .user-actions .btn-register:hover {
   background-color: #923f27;
   border-color: #923f27;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
 }
 
 /* Ícono de usuario */
@@ -135,4 +147,6 @@ main {
 .icon-user:hover {
   background-color: #b85c38;       /* Hover más fuerte */
   color: #fff;                     /* Ícono blanco */
+  transform: translateY(-3px);
 }
+
