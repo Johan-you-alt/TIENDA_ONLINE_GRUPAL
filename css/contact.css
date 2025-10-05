@@ -1,153 +1,134 @@
-/* contact.css - estilos específicos para la página de contacto
-   Mantiene la misma estética que global.css/header.css, y es responsive.
-*/
+/* ============================= */
+/* CONTACT.CSS */
+/* ============================= */
 
-/* espacio desde el header fijo y centrado del contenido */
 .contact-page {
-  padding: 80px 18px 60px; /* 80px para no quedar debajo del header */
+  padding: 100px 18px 60px; /* espacio por header fijo */
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
-  color: #333;
+  gap: 24px;
+  background-color: #fafafa; /* igual que forms.css */
   box-sizing: border-box;
 }
 
-/* contenedor principal: form + info */
 .contact-container {
   width: 100%;
   max-width: 1000px;
   display: flex;
-  gap: 32px;
+  gap: 28px;
   align-items: flex-start;
   justify-content: center;
-  padding: 0 12px;
   box-sizing: border-box;
 }
 
 /* formulario */
 .contact-form {
   flex: 1 1 580px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  box-sizing: border-box;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px; /* mismo estilo que forms.css */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* etiquetas e inputs coherentes con global.css */
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #3e2723;
+}
+
 .contact-form label {
   display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #4a3a31;
-  font-size: 0.95rem;
+  margin: 10px 0 5px;
+  font-weight: bold;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
+.contact-form input,
 .contact-form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 14px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 15px;
-  background: #fff;
-  box-sizing: border-box;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
 }
 
-/* botón enviar (coherente con .btn-cta / .btn-hero) */
+/* botón igual que en forms.css */
 .contact-form button[type="submit"] {
-  padding: 10px 18px;
-  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  background-color: #6f4e37;
+  color: white;
   border: none;
-  background-color: #b85c38;
-  color: #fff;
-  font-weight: 700;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
-  display: inline-block;
+  transition: background-color 0.25s ease, transform 0.2s ease;
 }
 
 .contact-form button[type="submit"]:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.10);
-  background-color: #923f27;
+  background-color: #5d4037;
+  transform: translateY(-2px);
 }
 
-/* tarjeta de información */
+/* tarjeta de info */
 .contact-info {
   flex: 0 0 300px;
-  background-color: #fff;
-  padding: 18px 20px;
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  box-sizing: border-box;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .contact-info h2 {
   margin: 0 0 10px 0;
-  color: #5c3d2e;
-  font-size: 1.15rem;
+  color: #3e2723;
 }
 
-/* textos de info */
 .contact-info p {
   margin: 8px 0;
-  line-height: 1.4;
   color: #333;
   font-size: 0.95rem;
 }
 
-/* boton extra para cambiar color (si lo vas a añadir) */
+/* botón extra de cambiar fondo */
 #btn-color {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 8px 14px;
+  margin-top: 12px;
+  padding: 10px 16px;
   border-radius: 8px;
   border: none;
   background-color: #f0a500;
   color: #1b1b1b;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+  transition: transform 0.2s ease, background-color 0.25s ease;
 }
 
 #btn-color:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.10);
   background-color: #d08b00;
+  transform: translateY(-2px);
 }
 
-/* responsive: apilar form + info en pantallas pequeñas */
-@media (max-width: 900px) {
-  .contact-container {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 18px;
-    padding: 0 12px;
-  }
-
-  .contact-info {
-    flex: none;
-    width: 100%;
-  }
-
-  .contact-form {
-    flex: none;
-    width: 100%;
-  }
-}
-
-/* pequeño ajuste para el título y párrafo introductorio */
-.contact-page h1 {
-  font-size: 1.9rem;
+html, body {
+  height: 100%;
   margin: 0;
-  color: #222;
 }
 
-.contact-page p {
-  margin: 0 0 8px 0;
-  color: #4f4f4f;
+/* Estructura: header + main (flex-grow) + footer */
+body.contact-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+/* el main ocupa el espacio disponible */
+.contact-page {
+  flex: 1;
+}
+
+/* el footer se queda siempre abajo */
+.main-footer {
+  margin-top: auto;
+  width: 100%;
+}
+
+
