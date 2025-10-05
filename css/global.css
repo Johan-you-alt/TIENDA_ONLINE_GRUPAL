@@ -204,3 +204,20 @@ main.login-page {
 .btn-cta:hover {
   background-color: #923f27;
 }
+
+/*Añadir Producto del Día*/
+#contenedor-dinamico {
+    /* Si el elemento es un solo producto (como en tu código), 
+       esta es la forma más sencilla: */
+    text-align: center;
+    margin-top: 20px; 
+    /* Si quisieras que el elemento en sí mismo ocupe menos ancho, también lo puedes centrar: */
+    /* display: flex; 
+       justify-content: center; */
+}
+
+/* Y si el producto debe ocupar su propio espacio: */
+#contenedor-dinamico .producto {
+    /* Esto es opcional, solo para que el producto no ocupe todo el ancho */
+    display: inline-block; 
+}

@@ -1,0 +1,143 @@
+/* ============================= */
+/* CONTACT.CSS */
+/* ============================= */
+
+/* MAIN section: Centrado y padding */
+.contact-page {
+  /* Ocupa el espacio restante para empujar el footer hacia abajo (viene de global.css) */
+  flex: 1; 
+  padding: 1000px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-page h1 {
+  text-align: center;
+  color: #5c3d2e; /* Tono café oscuro */
+  margin-bottom: 10px;
+  font-size: 2.5rem;
+}
+
+/* Párrafo debajo del título */
+.contact-page > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* Contenedor principal: distribuye el formulario y la información */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Alinea arriba si tienen diferente altura */
+}
+
+/* Estilo del Formulario BOX (La caja blanca del formulario) */
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 550px;
+}
+
+/* Estilo de la Sección de Información BOX (La caja de datos de contacto) */
+.contact-info {
+  width: 100%;
+  max-width: 350px;
+  padding: 30px;
+  background-color: #fff8f0; /* Tono suave, similar a global.css */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contact-info h2 {
+  color: #b85c38; /* Tono de acento (marrón claro) */
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #e0c097;
+  padding-bottom: 5px;
+}
+
+.contact-info p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-info strong {
+  color: #5c3d2e;
+}
+
+
+/* ==================================== */
+/* ESTILOS DE ELEMENTOS DENTRO DEL FORMULARIO */
+/* ==================================== */
+
+/* Estilo general de los labels */
+.contact-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #5c3d2e;
+}
+
+/* Estilo general de los inputs y textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* Crucial para que el padding no desborde el width */
+    font-size: 1rem;
+}
+
+/* Estilo para los botones */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón "Generar Reporte" y "Enviar" */
+.contact-form button[type="button"],
+.contact-form button[type="submit"] {
+    background-color: #b85c38; /* Tono de acento (marrón claro) */
+    color: #fff;
+}
+
+.contact-form button[type="button"]:hover,
+.contact-form button[type="submit"]:hover {
+    background-color: #923f27; /* Tono más oscuro al pasar el ratón */
+}
+
+/* Estilo del textarea de reporte */
+.contact-form #reporte {
+    background-color: #f4f4f4;
+    font-family: monospace;
+    white-space: pre;
+    overflow-x: auto;
+    resize: vertical;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+

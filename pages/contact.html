@@ -56,15 +56,28 @@
         <label for="message">Mensaje</label>
         <textarea id="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
 
+        <fieldset style="border: none; padding: 10px 0; margin-bottom: 15px;">
+           <legend style="font-weight: bold; margin-bottom: 5px;">¿Desea recibir promociones?</legend>
+           <input type="radio" id="promo-si" name="promociones" value="Sí" required>
+           <label for="promo-si">Sí</label><br>
+           <input type="radio" id="promo-no" name="promociones" value="No" required>
+           <label for="promo-no">No</label>
+        </fieldset>
+
+        <button type="button" onclick="generarReporte()" style="margin-bottom: 20px;">Generar Reporte de Interés</button>
+
+        <label for="reporte">Reporte Generado:</label>
+        <textarea id="reporte" rows="8" readonly placeholder="El reporte aparecerá aquí."></textarea>
+
         <button type="submit">Enviar</button>
       </form>
 
       <!-- Información de contacto -->
       <div class="contact-info">
         <h2>Información</h2>
-        <p><strong>📍 Dirección:</strong> Av. Siempre Viva 123, Lima</p>
-        <p><strong>📞 Teléfono:</strong> +51 999 888 777</p>
-        <p><strong>📧 Email:</strong> contacto@croissantcaffe.com</p>
+        <p><strong>📍 Dirección:</strong> Av. piramide, San Juan de Lurigancho</p>
+        <p><strong>📞 Teléfono:</strong> +51 666 666 666</p>
+        <p><strong>📧Gmail:</strong> contacto@croissantcaffe.com</p>
       </div>
     </div>
   </main>
@@ -88,6 +101,6 @@
       <a href="#">✖️ Twitter</a>
     </div>
   </footer>
-
+ <script src="../js/main.js"></script>
 </body>
 </html>

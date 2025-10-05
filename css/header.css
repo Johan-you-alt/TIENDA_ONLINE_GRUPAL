@@ -60,7 +60,7 @@ main {
   color: #b85c38; /* tono cálido en hover */
 }
 
-/* 🔹 Estilos de los botones de usuario */
+/*  Estilos de los botones de usuario */
 .user-actions {
   display: flex;
   align-items: center;
@@ -135,4 +135,21 @@ main {
 .icon-user:hover {
   background-color: #b85c38;       /* Hover más fuerte */
   color: #fff;                     /* Ícono blanco */
+}
+
+/*ESTILOS PARA BOTON MODO OSCURO*/
+.main-header.modo-oscuro {
+    background-color: #2c2c2c; /* Fondo oscuro */
+    border-bottom-color: #5c3d2e; /* Línea de color oscuro */
+}
+
+.main-header.modo-oscuro .nav-menu a,
+.main-header.modo-oscuro .logo span,
+.main-header.modo-oscuro .user-actions .btn-login {
+    color: #f1f1f1; /* Letras claras */
+}
+
+.main-header.modo-oscuro .user-actions .btn-register {
+    background-color: #f1f1f1;
+    color: #2c2c2c; /* Botón de registro invertido */
 }
